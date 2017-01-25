@@ -39,9 +39,20 @@ $(function() {
 			}, errorHandler);
 	  	}, errorHandler);
 	}
+	
+	
+	/*
 	window.webkitStorageInfo.requestQuota(PERSISTENT, 1024*1024, function(grantedBytes) {
 		window.webkitRequestFileSystem(PERSISTENT, grantedBytes, onInitFs, errorHandler);
 	}, function(e) {
 	  	console.log('Error', e);
 	});
+	*/
+	var requestedBytes = 1024*1024; 
+	navigator.webkitPersistentStorage.requestQuota(requestedBytes, function(grantedBytes) {
+			window.webkitRequestFileSystem(PERSISTENT, grantedBytes, onInitFs, errorHandler);
+		}, function(e) {
+			console.log('Error', e);
+		}
+	);
 });
