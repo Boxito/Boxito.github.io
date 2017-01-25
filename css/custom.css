@@ -1,3 +1,5 @@
 @charset "UTF-8";
 /* CSS Document */
-
+.burger_icon {
+	content: '\E5D2';
+}
