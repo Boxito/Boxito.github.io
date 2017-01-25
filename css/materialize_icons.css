@@ -4,7 +4,6 @@
   font-weight: 400;
   src: local('Material Icons'), local('MaterialIcons-Regular'), url(../fonts/materialize_icons/materialize_icons.woff2) format('woff');
 }
-
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
