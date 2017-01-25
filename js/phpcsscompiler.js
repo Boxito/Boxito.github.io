@@ -1,8 +1,10 @@
 // JavaScript Document
 $(function() {
 	function errorHandler(e) {
+		var error_code = e.code;
+		console.log('Error[' + e.code + ']');
+		/*
 		var msg = '';
-		alert(e.QUOTA_EXCEEDED_ERR);
 		switch (e.code) {
 			case FileError.QUOTA_EXCEEDED_ERR:
 				msg = 'QUOTA_EXCEEDED_ERR';
@@ -24,6 +26,7 @@ $(function() {
 				break;
 		};
 		console.log('Error: ' + msg);
+		*/
 	}
 	function onInitFs(fs) {
 		fs.root.getFile('css/custom.php', {}, function(fileEntry) {
