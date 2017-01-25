@@ -2,7 +2,7 @@
 $(function() {
 	function errorHandler(e) {
 		var msg = '';
-		alert(e.code);
+		alert(e.code.FileError);
 		switch (e.code) {
 			case FileError.QUOTA_EXCEEDED_ERR:
 				msg = 'QUOTA_EXCEEDED_ERR';
